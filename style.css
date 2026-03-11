@@ -12,9 +12,9 @@ html {
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  color: #000;
-  background: #fff;
+  font-family: 'Pretendard Variable', Pretendard, system-ui, -apple-system, sans-serif;
+  color: #1a1a1a;
+  background: #fafaf8;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -26,12 +26,12 @@ body {
 }
 
 h2 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  margin-bottom: 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  margin-bottom: 2.5rem;
   text-transform: uppercase;
-  color: #666;
+  color: #8a8580;
 }
 
 /* Hero */
@@ -41,41 +41,68 @@ h2 {
   align-items: center;
   justify-content: center;
   text-align: center;
+  position: relative;
+  background: radial-gradient(ellipse at 50% 50%, #fff 0%, #fafaf8 70%);
 }
 
 .hero-title {
   font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 700;
   letter-spacing: -0.03em;
+  line-height: 1.1;
   margin-bottom: 1rem;
 }
 
 .hero-tagline {
   font-size: clamp(1.1rem, 2.5vw, 1.35rem);
   color: #666;
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Scroll hint */
+.scroll-hint {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 40px;
+  background: #d5d0cb;
+  animation: breathe 2.4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% { opacity: 0.2; transform: translateX(-50%) scaleY(0.6); }
+  50% { opacity: 0.6; transform: translateX(-50%) scaleY(1); }
 }
 
 /* Manifesto */
 #manifesto {
   padding: 120px 0;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #e8e6e3;
 }
 
 .manifesto-body p {
   font-size: clamp(1.05rem, 2vw, 1.15rem);
   color: #333;
-  line-height: 1.9;
-  margin-bottom: 1.5rem;
+  line-height: 2.0;
+  margin-bottom: 2rem;
 }
 
 .manifesto-body p:last-child {
   margin-bottom: 0;
+  padding-top: 2rem;
+  border-top: 1px solid #e8e6e3;
+  font-size: clamp(1.1rem, 2vw, 1.2rem);
+  font-weight: 500;
 }
 
 /* About */
 #about {
   padding: 120px 0;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #e8e6e3;
 }
 
 .about-description {
@@ -92,7 +119,7 @@ h2 {
 /* Products */
 #products {
   padding: 120px 0;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #e8e6e3;
 }
 
 .product-card {
@@ -100,10 +127,11 @@ h2 {
 }
 
 .product-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
   margin-bottom: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .product-name {
@@ -126,6 +154,11 @@ h2 {
   margin-bottom: 2.5rem;
 }
 
+.pillar {
+  padding-top: 1.25rem;
+  border-top: 1px solid #e8e6e3;
+}
+
 .pillar h4 {
   font-size: 0.95rem;
   font-weight: 600;
@@ -135,6 +168,7 @@ h2 {
 .pillar p {
   font-size: 0.9rem;
   color: #666;
+  line-height: 1.7;
 }
 
 .badge-coming-soon {
@@ -144,15 +178,16 @@ h2 {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #999;
-  border: 1px solid #ddd;
+  color: #8a8580;
+  background: #f5f4f2;
+  border: 1px solid #d5d0cb;
   border-radius: 20px;
 }
 
 /* Contact */
 #contact {
   padding: 120px 0;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #e8e6e3;
   text-align: center;
 }
 
@@ -166,21 +201,22 @@ h2 {
   display: inline-block;
   font-size: 1.25rem;
   font-weight: 600;
-  color: #000;
+  color: #1a1a1a;
   text-decoration: none;
   border-bottom: 2px solid #C44525;
   padding-bottom: 2px;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .email-link:hover {
   color: #C44525;
+  transform: translateY(-1px);
 }
 
 /* Footer */
 footer {
-  padding: 40px 0;
-  border-top: 1px solid #eee;
+  padding: 48px 0;
+  border-top: 1px solid #e8e6e3;
   text-align: center;
 }
 
@@ -198,18 +234,20 @@ footer p {
 .lang-toggle a {
   color: #999;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, text-underline-offset 0.2s ease;
 }
 
 .lang-toggle a:hover {
   color: #666;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 /* Fade-in animation */
 .fade-in {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(12px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .fade-in.visible {
