@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruminate Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <section id="hero">
+    <div class="container">
+      <h1 class="hero-title">Ruminate Studio</h1>
+      <p class="hero-tagline">We build software that matters.</p>
+      <a href="#contact" class="btn-cta">Get in Touch</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2>About</h2>
+      <p class="about-description">
+        Ruminate Studio is a software development studio focused on crafting thoughtful,
+        well-engineered products. We believe great software comes from deep thinking,
+        careful design, and relentless attention to detail.
+      </p>
+      <div class="services">
+        <div class="service-item">
+          <h3>Product Development</h3>
+          <p>End-to-end product design and engineering, from concept to launch.</p>
+        </div>
+        <div class="service-item">
+          <h3>Mobile Applications</h3>
+          <p>Native and cross-platform mobile experiences built for performance and usability.</p>
+        </div>
+        <div class="service-item">
+          <h3>Backend Systems</h3>
+          <p>Scalable, reliable server infrastructure and API design.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Interested in working together? We'd love to hear from you.</p>
+      <a href="mailto:hello@ruminate.studio" class="email-link">hello@ruminate.studio</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Ruminate Studio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for CTA button
+    document.querySelector('.btn-cta').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+
+    // Fade-in on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('#about, #contact').forEach(section => {
+      section.classList.add('fade-in');
+      observer.observe(section);
+    });
+  </script>
+
+</body>
+</html>
