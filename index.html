@@ -117,7 +117,7 @@
         manifestoP3: "A life where speed and depth go hand in hand. Where you look beyond what is right in front of you and take the time to reflect. We want to help make that balance possible.",
         manifestoP4: "We believe reading has the power to change a life \u2014 slowly, but unmistakably. That is why our first work begins there.",
         aboutTitle: "About",
-        aboutP1: "Ruminate Studio is a small company that takes its time. We choose meaningful problems and sit with them. We care less about growing fast and more about whether what we make genuinely helps someone\u2019s life.",
+        aboutP1: "Ruminate Studio is a small company that takes its time. We choose meaningful problems and sit with them.<br>We care less about growing fast and more about whether what we make genuinely helps someone\u2019s life.",
         aboutP2: "To ruminate means to turn something over quietly until it becomes clear. That is how we try to work.",
         productsTitle: "What We\u2019re Building",
         readogTagline: "A reading companion for people who want to keep books close to everyday life.",
@@ -134,7 +134,7 @@
         manifestoP3: "속도와 깊이가 함께 가는 삶. 눈앞의 성과만이 아니라 긴 호흡으로 자신을 돌아보는 삶. 우리는 그런 균형을 돕는 일을 하고 싶습니다.",
         manifestoP4: "독서는 느리지만 삶을 분명하게 바꾸는 힘이 있다고 믿습니다. 그래서 우리의 첫 번째 일도 거기서 시작합니다.",
         aboutTitle: "About",
-        aboutP1: "Ruminate Studio는 천천히 가는 작은 회사입니다. 의미 있는 문제를 고르고, 깊이 고민합니다. 빠르게 성장하는 것보다, 만든 것이 누군가의 삶에 진짜 도움이 되는지를 더 중요하게 생각합니다.",
+        aboutP1: "Ruminate Studio는 천천히 가는 작은 회사입니다. 의미 있는 문제를 고르고, 깊이 고민합니다.<br>빠르게 성장하는 것보다, 누군가의 삶에 진짜 도움이 되는지를 더 중요하게 생각합니다.",
         aboutP2: "Ruminate는 조용히 곱씹는다는 뜻입니다. 우리가 일하고 싶은 방식이기도 합니다.",
         productsTitle: "\uc6b0\ub9ac\uac00 \ub9cc\ub4e4\uace0 \uc788\ub294 \uac83",
         readogTagline: "책을 일상 가까이 두고 싶은 사람들을 위한 독서 동반자.",
@@ -149,7 +149,7 @@
       localStorage.setItem('lang', lang);
       document.documentElement.lang = lang;
       document.querySelectorAll('[data-i18n]').forEach(function(el) {
-        el.textContent = translations[lang][el.dataset.i18n];
+        el.innerHTML = translations[lang][el.dataset.i18n];
       });
       document.querySelectorAll('.lang-toggle a').forEach(function(a) {
         if (a.dataset.lang === lang) {
