@@ -111,6 +111,48 @@ h2 {
   75% { transform: translate(-55%, -40%) scaleX(1.1) scaleY(0.9); border-radius: 50% 40% 55% 50%; }
 }
 
+#hero .orb-4 {
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  top: 10%;
+  left: -10%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(210, 140, 90, 0.3) 0%, transparent 70%);
+  filter: blur(55px);
+  pointer-events: none;
+  z-index: 0;
+  animation: orb-drift-4 28s ease-in-out infinite;
+}
+
+#hero .orb-5 {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  bottom: 5%;
+  right: -8%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(160, 130, 120, 0.35) 0%, transparent 70%);
+  filter: blur(45px);
+  pointer-events: none;
+  z-index: 0;
+  animation: orb-drift-5 22s ease-in-out infinite;
+}
+
+@keyframes orb-drift-4 {
+  0%, 100% { transform: translate(0, 0) scale(1); border-radius: 50%; }
+  20% { transform: translate(100px, 120px) scaleX(1.15) scaleY(0.9); border-radius: 55% 45% 50% 50%; }
+  45% { transform: translate(150px, -60px) scaleX(0.85) scaleY(1.1); border-radius: 45% 50% 55% 45%; }
+  70% { transform: translate(-80px, -100px) scaleX(1.1) scaleY(0.85); border-radius: 50% 55% 45% 55%; }
+}
+
+@keyframes orb-drift-5 {
+  0%, 100% { transform: translate(0, 0) scale(1); border-radius: 50%; }
+  20% { transform: translate(-120px, -80px) scaleX(0.9) scaleY(1.2); border-radius: 50% 45% 55% 50%; }
+  45% { transform: translate(-60px, 130px) scaleX(1.2) scaleY(0.85); border-radius: 45% 55% 45% 55%; }
+  70% { transform: translate(110px, 50px) scaleX(0.9) scaleY(1.15); border-radius: 55% 50% 50% 45%; }
+}
+
 /* Grain overlay */
 .grain-overlay {
   position: absolute;
