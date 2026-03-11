@@ -44,6 +44,31 @@
     </div>
   </section>
 
+  <section id="products">
+    <div class="container">
+      <h2>Products</h2>
+      <div class="product-card">
+        <h3 class="product-name">Readog</h3>
+        <p class="product-tagline">Think deeply about reading.</p>
+        <div class="product-pillars">
+          <div class="pillar">
+            <h4>Daily Reading</h4>
+            <p>매일 읽는 습관</p>
+          </div>
+          <div class="pillar">
+            <h4>Right Reading</h4>
+            <p>올바른 독서</p>
+          </div>
+          <div class="pillar">
+            <h4>Output Reading</h4>
+            <p>기록하는 독서</p>
+          </div>
+        </div>
+        <span class="badge-coming-soon">Coming Soon</span>
+      </div>
+    </div>
+  </section>
+
   <section id="contact">
     <div class="container">
       <h2>Contact</h2>
@@ -76,7 +101,7 @@
       });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('#about, #contact').forEach(section => {
+    document.querySelectorAll('#about, #products, #contact').forEach(section => {
       section.classList.add('fade-in');
       observer.observe(section);
     });
