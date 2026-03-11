@@ -9,9 +9,31 @@
 </head>
 <body>
 
+  <!-- SVG grain filter -->
+  <svg style="position:absolute;width:0;height:0" aria-hidden="true">
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </svg>
+
   <section id="hero">
+    <!-- Ripple rings -->
+    <svg class="ripple-rings" viewBox="0 0 600 600" aria-hidden="true">
+      <circle cx="300" cy="300" r="120" fill="none" stroke="#c5c0bb" stroke-width="1.5" class="ripple-ring" style="animation-delay:0s"/>
+      <circle cx="300" cy="300" r="180" fill="none" stroke="#b8b2ab" stroke-width="1.5" class="ripple-ring" style="animation-delay:2s"/>
+      <circle cx="300" cy="300" r="240" fill="none" stroke="#ada6a0" stroke-width="1.5" class="ripple-ring" style="animation-delay:4s"/>
+    </svg>
+    <!-- Gradient orbs -->
+    <div class="orb orb-3" aria-hidden="true"></div>
+    <!-- Grain overlay -->
+    <div class="grain-overlay" aria-hidden="true"></div>
     <div class="container">
-      <h1 class="hero-title">Ruminate Studio</h1>
+      <h1 class="hero-title">
+        <span class="hero-title-main">Ruminate</span>
+        <span class="hero-title-sub">Studio</span>
+      </h1>
+      <div class="hero-divider"></div>
       <p class="hero-tagline" data-i18n="heroTagline">We help people think more deeply.</p>
     </div>
     <div class="scroll-hint" aria-hidden="true"></div>
