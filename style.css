@@ -126,11 +126,22 @@ h2 {
   text-align: center;
 }
 
+.product-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.product-header-text {
+  text-align: left;
+}
+
 .product-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 14px;
-  margin-bottom: 0.75rem;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
@@ -138,13 +149,12 @@ h2 {
   font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 700;
   letter-spacing: -0.02em;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 .product-tagline {
   font-size: 1.05rem;
   color: #666;
-  margin-bottom: 2.5rem;
 }
 
 .product-pillars {
