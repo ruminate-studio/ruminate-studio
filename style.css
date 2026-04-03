@@ -370,8 +370,6 @@ h2::before {
 .product-icon {
   width: 64px;
   height: 64px;
-  border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .product-name {
